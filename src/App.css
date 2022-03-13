@@ -1,38 +1,125 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap");
+
+body {
+  margin: auto;
+  padding: auto;
+  font-family: "Roboto", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.root {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px dotted magenta;
+  padding: 50px;
+  padding-right: 70px;
+  border-radius: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+input[type="checkbox"] {
+  height: 30px;
+  width: 30px;
+  appearance: none;
+  background-color: #d5d5d5;
+  border-radius: 5px;
+  cursor: pointer;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+label {
+  width: 100%;
+  border: 0.5px solid black;
+  margin-bottom: 20px;
+  font-size: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 30px;
+  padding-left: 20px;
+}
+
+.todo {
+  margin-left: 10px;
+}
+
+input[type="checkbox"]:after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 800;
+  content: "\f00c";
+  font-size: 25px;
+  display: none;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+input[type="checkbox"]:hover {
+  background-color: #a5a5a5;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input[type="checkbox"]:checked {
+  background-color: rgb(0, 255, 0);
+}
+
+input[type="checkbox"]:checked:after {
+  display: block;
+}
+
+input[type="text"] {
+  width: 100%;
+  height: 30px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 2px solid #aaa;
+  outline: none;
+  transition: 0.2s;
+  font-size: 30px;
+}
+
+input[type="text"]:focus {
+  border-color: dodgerblue;
+  box-shadow: 0 0 8px 0 dodgerblue;
+}
+
+.task {
+  width: 45%;
+  height: 40px;
+  margin: 10px;
+  color: black;
+  font-weight: 600;
+  background-color: rgb(0, 255, 234);
+  border-radius: 5px;
+  box-shadow: 1px rgb(229, 255, 0);
+  font-size: 20px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+.clear {
+  width: 45%;
+  margin-left: 35px;
+  height: 40px;
+  right: 5%;
+  color: black;
+  font-weight: 600;
+  background-color: rgb(255, 0, 0);
+  border-radius: 5px;
+  box-shadow: 1px rgb(229, 255, 0);
+  font-size: 20px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+.left {
+  margin-top: 20px;
+  font-size: 40px;
+  color: red;
+  text-align: center;
 }
